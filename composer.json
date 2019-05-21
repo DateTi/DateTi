@@ -1,0 +1,25 @@
+{
+    "name": "dateti/dateti",
+    "description": "DateTi",
+    "type": "library",
+    "license": "Apache 2.0",
+    "authors": [
+        {
+            "name": "Jan Galek",
+            "email": "admin@gcore.cz"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php": ">=7.2",
+        "nette/neon": "^2.4|^3.0@dev"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "DateTi\\": "src"
+        }
+    }
+}
