@@ -4,7 +4,7 @@ declare(strict_types=1);
 namespace DateTi\Configuration;
 
 use DateTi\DateTi;
-use DateTi\HolidaysInterface;
+use DateTi\Holidays\HolidaysInterface;
 
 interface LocalizationInterface
 {

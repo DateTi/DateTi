@@ -11,10 +11,11 @@ use Nette\Neon\Neon;
 abstract class AbstractLocalization implements LocalizationInterface
 {
     /** @var string */
-    protected $local;
+	protected $local;
 
-    /** @var array */
-    protected $config;
+	/** @var array */
+	protected $config;
+
 
     protected function __construct(string $local)
     {
@@ -102,5 +103,4 @@ abstract class AbstractLocalization implements LocalizationInterface
 
         return $this->config;
     }
-
 }
