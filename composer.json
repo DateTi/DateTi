@@ -2,7 +2,7 @@
     "name": "dateti/dateti",
     "description": "DateTi",
     "type": "library",
-    "license": "Apache 2.0",
+    "license": "Apache-2.0",
     "authors": [
         {
             "name": "Jan Galek",
@@ -12,14 +12,22 @@
     "minimum-stability": "stable",
     "require": {
         "php": ">=7.2",
-        "nette/neon": "^2.4|^3.0@dev"
+        "nette/neon": "^2.4|^3.0@dev",
+        "dateti/localization": "v1.0.0-alpha1",
+        "dateti/holidays": "^1.0",
+        "dateti/time": "^1.0"
     },
     "require-dev": {
-        "phpunit/phpunit": "^8.1"
+        "phpunit/phpunit": "^8.1",
+        "dateti/coding-standard": "^1.0"
     },
     "autoload": {
         "psr-4": {
             "DateTi\\": "src"
         }
+    },
+    "scripts": {
+        "cs": "tests/coding-standard/vendor/bin/ecs check src tests/unit --config tests/coding-standard/coding-standard-php71.yml",
+        "csf": "tests/coding-standard/vendor/bin/ecs check src tests/unit --config tests/coding-standard/coding-standard-php71.yml --fix"
     }
 }
