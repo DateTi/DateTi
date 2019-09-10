@@ -11,17 +11,15 @@ use Nette\Neon\Neon;
 abstract class AbstractLocalization implements LocalizationInterface
 {
     /** @var string */
-	protected $local;
+    protected $local;
 
-	/** @var array */
-	protected $config;
-
+    /** @var array */
+    protected $config;
 
     protected function __construct(string $local)
     {
         $this->local = $local;
     }
-
 
     public function setLocalization(string $local): void
     {
@@ -29,36 +27,30 @@ abstract class AbstractLocalization implements LocalizationInterface
         $this->local = $local;
     }
 
-
     public function getLocalization(): string
     {
         return $this->local;
     }
-
 
     public function getInflexion($day, int $inflexion)
     {
         return $this->getInflexionDay($day)[$inflexion];
     }
 
-
     public function getDifference()
     {
         return $this->loadConfig()['difference'];
     }
-
 
     public function getAts()
     {
         return $this->loadConfig()['at'];
     }
 
-
     public function getAt($day)
     {
         return $this->getAts()[$day];
     }
-
 
     public function getTranslateDifference(Calendar $date): string
     {
@@ -74,24 +66,20 @@ abstract class AbstractLocalization implements LocalizationInterface
         return Helper::dateDifferenceTranslation($date, $curDate, $diff, $local);
     }
 
-
     private function getInflexionDay($day)
     {
         return $this->getInflexionDays()[$day];
     }
-
 
     private function getInflexionDays()
     {
         return $this->getInflexions()['days'];
     }
 
-
     private function getInflexions()
     {
         return $this->loadConfig()['inflexion'];
     }
-
 
     private function loadConfig()
     {

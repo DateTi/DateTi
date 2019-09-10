@@ -27,7 +27,7 @@
         }
     },
     "scripts": {
-        "cs": "tests/coding-standard/vendor/bin/ecs check src tests/unit --config tests/coding-standard/coding-standard-php71.yml",
-        "csf": "tests/coding-standard/vendor/bin/ecs check src tests/unit --config tests/coding-standard/coding-standard-php71.yml --fix"
+        "cs": "tests/coding-standard/vendor/bin/ecs check src --config tests/coding-standard/coding-standard-php71.yml",
+        "csf": "tests/coding-standard/vendor/bin/ecs check src --config tests/coding-standard/coding-standard-php71.yml --fix"
     }
 }
