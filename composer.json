@@ -12,7 +12,6 @@
     "minimum-stability": "stable",
     "require": {
         "php": ">=7.2",
-        "nette/neon": "^2.4|^3.0@dev",
         "dateti/localization": "v1.0.0-alpha1",
         "dateti/holidays": "^1.0",
         "dateti/time": "^1.0"

@@ -14,7 +14,7 @@ class DateTi extends DateTime
     /** @var LocalizationConfigurationInterface */
     private $localizationConfiguration;
 
-    public function __construct(string $time, DateTimeZone $timezone, LocalizationConfigurationInterface $localizationConfiguration)
+    public function __construct(string $time, DateTimeZone $timezone, LocalizationConfigurationInterface $localizationConfiguration = null)
     {
         parent::__construct($time, $timezone);
         $this->localizationConfiguration = $localizationConfiguration;
