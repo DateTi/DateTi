@@ -5,11 +5,12 @@ namespace DateTi;
 
 use DateTi\Configuration\LocalizationInterface as LocalizationConfigurationInterface;
 use DateTi\Holidays\HolidaysInterface;
+use DateTi\Time\DateTimeInterface;
 use DateTi\Time\Day;
 use DateTime;
 use DateTimeZone;
 
-class DateTi extends DateTime
+class DateTi extends DateTime implements DateTimeInterface
 {
     /** @var LocalizationConfigurationInterface[] */
     private $localizationConfiguration;
@@ -25,6 +26,11 @@ class DateTi extends DateTime
     {
         parent::__construct($time, $timezone);
         $this->localizationConfiguration = $localizationConfiguration;
+    }
+
+    public function modify(string $modify): DateTimeInterface
+    {
+        return parent::modify($modify);
     }
 
     public function setHolidays(string $country): void
