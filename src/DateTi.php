@@ -11,10 +11,17 @@ use DateTimeZone;
 
 class DateTi extends DateTime
 {
-    /** @var LocalizationConfigurationInterface */
+    /** @var LocalizationConfigurationInterface[] */
     private $localizationConfiguration;
 
-    public function __construct(string $time, DateTimeZone $timezone, LocalizationConfigurationInterface $localizationConfiguration = null)
+    /**
+     * DateTi constructor.
+     * @param string $time
+     * @param DateTimeZone $timezone
+     * @param LocalizationConfigurationInterface[] $localizationConfiguration
+     * @throws \Exception
+     */
+    public function __construct(string $time, DateTimeZone $timezone, array $localizationConfiguration = [])
     {
         parent::__construct($time, $timezone);
         $this->localizationConfiguration = $localizationConfiguration;
