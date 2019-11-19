@@ -28,7 +28,10 @@ class DateTi extends DateTime implements DateTimeInterface
         $this->localizationConfiguration = $localizationConfiguration;
     }
 
-    public function modify(string $modify): DateTimeInterface
+    /**
+     * @inheritDoc
+     */
+    public function modify($modify)
     {
         return parent::modify($modify);
     }
