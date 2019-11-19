@@ -12,7 +12,7 @@
     "minimum-stability": "stable",
     "require": {
         "php": ">=7.2",
-        "dateti/localization": "v1.0.0-alpha1",
+        "dateti/localization": "v1.0.0-alpha1|dev-master",
         "dateti/holidays": "^1.0|dev-master",
         "dateti/time": "^1.0|dev-master",
     },
